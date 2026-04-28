@@ -29,7 +29,7 @@ TA Nishanth Ramesha
 Reasoning: The data set being used is 166gb so to speed up processing we use a relatively large number of cores for increased parallelism. As long as we avoid using memory intensive operations such as .collect() 128 gb of memory is enough to handle operations on a file this large without crashing because not all of it is on the RAM at any given point. 
 
 3) Using Executor instances \= Total Cores \- 1 and Executor memory \= (Total Memory \- Driver Memory) / Executor Instances we get 63 executor instances \= 64-1 and executor memory \= (128-2)/63 \= \~2 GB.  
-4) ![][image1]
+4) 
 
 3.) Data Exploration using Spark  
 a.)  
