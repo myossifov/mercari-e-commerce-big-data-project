@@ -79,13 +79,16 @@ There are no duplicates in the data; this confirmed by the research paper associ
 
 
 **Plot 2**  
-![][image4]  
+<img width="634" height="589" alt="download" src="https://github.com/user-attachments/assets/69f1c922-609c-4cf9-903c-b39fda103436" />
+ 
 
 **Plot 3**  
-![][image5]  
+<img width="625" height="589" alt="download" src="https://github.com/user-attachments/assets/8a327ef2-f0cf-428b-a799-7c432d8bf1ba" />
+
 
 **Plot 4**  
-**![][image6]** 
+<img width="581" height="453" alt="download" src="https://github.com/user-attachments/assets/f365b167-0a0e-4d19-a2d7-7f5aa97ef770" />
+ 
 
 c) **Plot 1** is a histogram that shows the distribution of item prices across the dataset. The distribution is heavily skewed to the right, as most items are priced near $0 \- $50, with the most common price range being the lowest. The prices for items extend all the way up to $5000, showing the small amount of high-value items.
 
