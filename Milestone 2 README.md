@@ -62,7 +62,7 @@ b.)
 **Shipper\_name** (categorical): String that has two classes (buyer, seller) that denotes which of the two pays for shipment.   
 **Shipper\_id** (categorical): Integer representation of shipper\_name.  
 c.) Yes, there are missing values in several of the columns/categories. The columns with missing data include: **brand\_name, size\_name, color, c1\_name, c2\_name, item\_condition\_name.** These missing entries likely happen because product listings are usually not fully populated by users, which causes missing fields.  
-![][image2]  
+![Missing values output](missingvalues.jpg)
 c1\_name & c1\_id have 239418 missing values  
 c2\_name & c2\_name have 79007951 missing values  
 brand\_name has 234303407 missing values  
