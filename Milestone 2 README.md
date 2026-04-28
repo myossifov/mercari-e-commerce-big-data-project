@@ -75,7 +75,8 @@ There are no duplicates in the data; this confirmed by the research paper associ
 4\) Data Plots  
    
 **Plot 1**  
-![][image3] 
+<img width="554" height="453" alt="download" src="https://github.com/user-attachments/assets/a84478d1-3b78-4cf7-9639-012a21970c1c" />
+
 
 **Plot 2**  
 ![][image4]  
