@@ -151,8 +151,9 @@ b.)
 \+---------------+-----------------------------------------------------+------------------+------------------+  
 The second model with slightly more tuned hyperparameters performs slightly better than the first decision tree classifier model. However, the improvement is only about 2 percent and is still lower than we would like.  
 c.)  
-This is likely due using the entropy splitting criterion which   
-d.) We will likely use XGBoost for our next models due to it being effective on datasets with highly imbalanced classes such as the one we are using.
+Decision tree 2 preforms the best but the improvement in marginal. The marginal improvement is likely due using the entropy splitting criterion which is much better at dealing with imbalanced class distributions when compared to the default gini splitting criterion.
+d.)
+We will likely use XGBoost for our next models due to it being effective on datasets with highly imbalanced classes such as the one we are using. Though considering that a decision tree classifier did moderately well considering how noisy and imbalanced this dataset is, we will also consider using a random forest classifier to see if we can get a better accuracy score than 60%.
 
 4.)  
 For the first distributed model, we trained a Decision Tree Classifier to predict whether a user action would lead to buy\_comp (purchase \[1\] or non-purchase \[0\]). We use price-based and categorical features for our model, which achieved about 60% validation accuracy. This is better than random guessing for a binary classification task like buy\_comp, so it provides a useful baseline for predicting purchases, but better tuning or stronger models would most likely be needed to improve performance.
