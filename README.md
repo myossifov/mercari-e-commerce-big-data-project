@@ -400,3 +400,8 @@ The second model improved on this by adding dimensionality reduction with SVD be
 The main limitation of the project is that the dataset is highly imbalanced, with purchase events being much rarer than non-purchase events. Because of this, accuracy alone is not enough to fully judge model quality. Future work should focus more on precision, recall, F1-score, AUC, threshold tuning, and better handling of class imbalance. Additional models such as Random Forests, Gradient-Boosted Trees, or regularized Logistic Regression with different SVD component counts could also be explored.
 
 This project also demonstrated the importance of big data and distributed computing. The Mercari dataset was far too large to handle efficiently on a local machine, so Spark and the SDSC Expanse environment were necessary for loading, preprocessing, transforming, and modeling the data.
+
+
+# Statement of Collaboration
+
+William Zou - For this project, I contributed as both a coder and writer. I helped write and edit the initial abstract, and also worked on the data exploration coding & analysis for the figures provided. I was also primarily responsible for the  preprocessing portion of the project in part 3. Additionally, I wrote and formatted a significant portion of the final report.
