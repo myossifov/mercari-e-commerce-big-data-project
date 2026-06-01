@@ -12,10 +12,10 @@ TA Nishanth Ramesha
 
 ## Project Links
 
-1\) c) [https://huggingface.co/datasets/mercari-us/merrec](https://huggingface.co/datasets/mercari-us/merrec)
+[https://huggingface.co/datasets/mercari-us/merrec](https://huggingface.co/datasets/mercari-us/merrec)
 
-- [Milestone4_part1.ipynb](Milestone4_part1.ipynb)
-- [Milestone4_part2.ipynb](Milestone4_part2.ipynb)
+[Milestone4_part1.ipynb](Milestone4_part1.ipynb)
+[Milestone4_part2.ipynb](Milestone4_part2.ipynb)
 
 ## Introduction to Your Project
 
