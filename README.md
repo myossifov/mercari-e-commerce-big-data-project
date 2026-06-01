@@ -358,6 +358,17 @@ The clustering portion of the second model was less convincing. The K-Means silh
 
 We analyzed the model’s predictions by looking at correct classifications, false positives, and false negatives from the validation/test data. This was important because the dataset is highly imbalanced, with non-purchase events being much more common than purchase events. For the Decision Tree model, the validation results included 10,264 true positives, 11,410,504 true negatives, 7,599,186 false positives, and 6,690 false negatives. This means the model correctly identified some completed purchases, but it also predicted many non-purchase events as purchases. In this context, false positives represent users who were predicted to complete a purchase but did not, while false negatives represent actual purchases that the model missed. After adjusting the threshold, the model produced 13,256 true positives, 7,703,606 true negatives, 11,306,084 false positives, and 3,698 false negatives. This reduced the number of missed purchases, but it also increased the number of false positives. Therefore, the threshold-adjusted model became more aggressive in predicting purchases. For the SVD + Logistic Regression model, the final accuracy was much higher, with about 99% accuracy on both training and test data. However, because of the class imbalance, accuracy alone may not fully explain performance. Future prediction analysis should include a full confusion matrix, precision, recall, F1-score, and AUC for the reduced-feature model.
 
+## Fitting Analysis
+
+Where does your model fit in the fitting graph?
+The SVD + Logistic Regression model fits well with a training accuracy of 0.9945 and test accuracy of 0.9943. This means the model is not overfitting and generalizes well to the test data.
+
+What are potential future improvements or next models?
+In the future, we could test different numbers of SVD components and test their performances. In addition to this, we could try more sophisticated ML models like XGBoost.
+
+How does dimensionality reduction affect your results compared to the full feature set?
+The original feature space had 307 features after one-hot encoding categorical variables. SVD was used, as a result, to reduce the dimensionality down to 20. The cumulative explained variance plot illustrates that the variance increases linearly, so the information is spread somewhat evenly across the components and not concentrated in a few. Overall, the SVD + Log Reg model performed much better.
+
 ## Speedup Analysis
 
 
