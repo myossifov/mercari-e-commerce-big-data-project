@@ -17,7 +17,7 @@ TA Nishanth Ramesha
 [Milestone4_part1.ipynb](Milestone4_part1.ipynb)
 [Milestone4_part2.ipynb](Milestone4_part2.ipynb)
 
-## Introduction to Your Project
+## Introduction
 
 This project uses the Mercari MerRec dataset to predict whether a user action would lead to `buy_comp` (purchase [1] or non-purchase [0]). This project was chosen because online marketplaces contain a large amount of user interaction data, and predicting purchase behavior can help explain which actions and item features are associated with stronger purchase intent.
 
