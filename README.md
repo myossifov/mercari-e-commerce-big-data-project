@@ -404,4 +404,4 @@ This project also demonstrated the importance of big data and distributed comput
 
 # Statement of Collaboration
 
-William Zou - For this project, I contributed as both a coder and writer. I helped draft and revise the initial abstract, contributed to the data exploration code, and wrote analysis for the figures included in the report. I was also primarily responsible for the preprocessing portion of Part 3. In addition, I helped write and format a significant portion of the final report.
+William Zou: Coder/Writer: For this project, I contributed as both a coder and writer. I helped draft and revise the initial abstract, contributed to the data exploration code, and wrote analysis for the figures included in the report. I was also primarily responsible for the preprocessing portion of Part 3. In addition, I helped write and format a significant portion of the final report.
