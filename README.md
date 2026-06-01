@@ -354,10 +354,6 @@ The second model used SVD dimensionality reduction before training Logistic Regr
 
 The clustering portion of the second model was less convincing. The K-Means silhouette score was close to 0, which means the reduced features did not form clear natural clusters. This suggests that unsupervised clustering was not very effective for separating purchase and non-purchase behavior. The SVD features appeared to be more useful for supervised prediction than for discovering natural groups. One shortcoming of the project was that sampling was necessary to make the analysis computationally manageable. While sampling helped the project run within the available Spark/HPC resources, it could've have removed some patterns from the full dataset.
 
-## Predictions Analysis
-
-We analyzed the model’s predictions by looking at correct classifications, false positives, and false negatives from the validation/test data. This was important because the dataset is highly imbalanced, with non-purchase events being much more common than purchase events. For the Decision Tree model, the validation results included 10,264 true positives, 11,410,504 true negatives, 7,599,186 false positives, and 6,690 false negatives. This means the model correctly identified some completed purchases, but it also predicted many non-purchase events as purchases. In this context, false positives represent users who were predicted to complete a purchase but did not, while false negatives represent actual purchases that the model missed. After adjusting the threshold, the model produced 13,256 true positives, 7,703,606 true negatives, 11,306,084 false positives, and 3,698 false negatives. This reduced the number of missed purchases, but it also increased the number of false positives. Therefore, the threshold-adjusted model became more aggressive in predicting purchases. For the SVD + Logistic Regression model, the final accuracy was much higher, with about 99% accuracy on both training and test data. However, because of the class imbalance, accuracy alone may not fully explain performance. Future prediction analysis should include a full confusion matrix, precision, recall, F1-score, and AUC for the reduced-feature model.
-
 ## Fitting Analysis
 
 Where does your model fit in the fitting graph?
@@ -368,6 +364,11 @@ In the future, we could test different numbers of SVD components and test their 
 
 How does dimensionality reduction affect your results compared to the full feature set?
 The original feature space had 307 features after one-hot encoding categorical variables. SVD was used, as a result, to reduce the dimensionality down to 20. The cumulative explained variance plot illustrates that the variance increases linearly, so the information is spread somewhat evenly across the components and not concentrated in a few. Overall, the SVD + Log Reg model performed much better.
+
+## Predictions Analysis
+
+We analyzed the model’s predictions by looking at correct classifications, false positives, and false negatives from the validation/test data. This was important because the dataset is highly imbalanced, with non-purchase events being much more common than purchase events. For the Decision Tree model, the validation results included 10,264 true positives, 11,410,504 true negatives, 7,599,186 false positives, and 6,690 false negatives. This means the model correctly identified some completed purchases, but it also predicted many non-purchase events as purchases. In this context, false positives represent users who were predicted to complete a purchase but did not, while false negatives represent actual purchases that the model missed. After adjusting the threshold, the model produced 13,256 true positives, 7,703,606 true negatives, 11,306,084 false positives, and 3,698 false negatives. This reduced the number of missed purchases, but it also increased the number of false positives. Therefore, the threshold-adjusted model became more aggressive in predicting purchases. For the SVD + Logistic Regression model, the final accuracy was much higher, with about 99% accuracy on both training and test data. However, because of the class imbalance, accuracy alone may not fully explain performance. Future prediction analysis should include a full confusion matrix, precision, recall, F1-score, and AUC for the reduced-feature model.
+
 
 ## Speedup Analysis
 
