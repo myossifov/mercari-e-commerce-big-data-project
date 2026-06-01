@@ -356,13 +356,10 @@ The clustering portion of the second model was less convincing. The K-Means silh
 
 ## Fitting Analysis
 
-Where does your model fit in the fitting graph?
 The SVD + Logistic Regression model fits well with a training accuracy of 0.9945 and test accuracy of 0.9943. This means the model is not overfitting and generalizes well to the test data.
 
-What are potential future improvements or next models?
 In the future, we could test different numbers of SVD components and test their performances. In addition to this, we could try more sophisticated ML models like XGBoost.
 
-How does dimensionality reduction affect your results compared to the full feature set?
 The original feature space had 307 features after one-hot encoding categorical variables. SVD was used, as a result, to reduce the dimensionality down to 20. The cumulative explained variance plot illustrates that the variance increases linearly, so the information is spread somewhat evenly across the components and not concentrated in a few. Overall, the SVD + Log Reg model performed much better.
 
 ## Predictions Analysis
