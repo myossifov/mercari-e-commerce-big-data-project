@@ -57,29 +57,22 @@ spark = SparkSession.builder \
 
 ## Figures
 
-**Plot 1**  
+**Figure 1**  
 <img width="554" height="453" alt="download" src="https://github.com/user-attachments/assets/a84478d1-3b78-4cf7-9639-012a21970c1c" />
 
-**Plot 2**  
+**Figure 2**  
 <img width="634" height="589" alt="download" src="https://github.com/user-attachments/assets/69f1c922-609c-4cf9-903c-b39fda103436" />
 
-**Plot 3**  
+**Figure 3**  
 <img width="625" height="589" alt="download" src="https://github.com/user-attachments/assets/8a327ef2-f0cf-428b-a799-7c432d8bf1ba" />
 
-**Plot 4**  
+**Figure 4**  
 <img width="581" height="453" alt="download" src="https://github.com/user-attachments/assets/f365b167-0a0e-4d19-a2d7-7f5aa97ef770" />
 
-**Figure 5: SVD Explained Variance**
+**Figure 5**
 
-![SVD explained variance](figures/svd_explained_variance.png)
+![SVD explained variance](svd_explained_variance.png)
 
-**Figure 6: Model Accuracy Comparison**
-
-![Model accuracy comparison](figures/model_accuracy_comparison.png)
-
-**Figure 7: Decision Tree Prediction Outcomes**
-
-![Decision Tree prediction outcomes](figures/dt_prediction_outcomes.png)
 
 ## Methods
 
@@ -125,13 +118,15 @@ item\_condition\_name has 500309 missing values
 
 There are no duplicates in the data; this confirmed by the research paper associated with the dataset; “the dataset, in addition to standard attributes like user\_id, item\_id, and session\_id, also incorporates unique features such as timestamped action types, detailed product taxonomy, and textual product attributes”. Because of the unique nature of the timestamp in stime, there is no possibility for a duplicate entry. Additionally, the paper also reviews the data cleaning and processing steps, explicitly removing duplicates: “Redundancy Reduction: To address the issue of repetitive actions within sequences, such as consecutive clicks on the same item, a deduplication process was applied. This step ensured that only unique consecutive interactions were retained, reducing redundancy and enhancing data conciseness.”
 
-**Plot 1** is a histogram that shows the distribution of item prices across the dataset. The distribution is heavily skewed to the right, as most items are priced near $0 \- $50, with the most common price range being the lowest. The prices for items extend all the way up to $5000, showing the small amount of high-value items.
+**Figure 1** is a histogram that shows the distribution of item prices across the dataset. The distribution is heavily skewed to the right, as most items are priced near $0 \- $50, with the most common price range being the lowest. The prices for items extend all the way up to $5000, showing the small amount of high-value items.
 
-**Plot 2** is a bar chart that shows the count of each user interaction event type (**event\_id**) across the dataset. **item\_view** is by far the most common event, with over 1 billion occurrences, indicating that the majority of user interactions are just passively browsing, where users look/click on items, rather than acting on them. Item\_like is the second most frequent event, at around 180 million occurrences, showing that saving or favoriting an item is the next most common behavior. The following events, such as item\_add\_to\_cart\_tap (25 million), offer\_make (8 million), buy\_start (3 million), and buy\_comp (1 million), show a steep drop-off, which show that the vast majority of users browse rather than purchase or act on items.
+**Figure 2** is a bar chart that shows the count of each user interaction event type (**event\_id**) across the dataset. **item\_view** is by far the most common event, with over 1 billion occurrences, indicating that the majority of user interactions are just passively browsing, where users look/click on items, rather than acting on them. Item\_like is the second most frequent event, at around 180 million occurrences, showing that saving or favoriting an item is the next most common behavior. The following events, such as item\_add\_to\_cart\_tap (25 million), offer\_make (8 million), buy\_start (3 million), and buy\_comp (1 million), show a steep drop-off, which show that the vast majority of users browse rather than purchase or act on items.
 
-**Plot 3** is a bar chart that shows the events broken down by the product category, stored in **c0\_name.** Women’s fashion is the highest populated category with over \~400 million events, nearly double the next category after, which is Toys & Collectibles at \~240 million. Men, Kids, Home, Electronics, and Beauty form a mid-tier cluster at about 80-120 million events each. Finally, categories like Handmade, Office, Arts & Crafts, Pet Supplies, Garden & Outdoor, Tools, all have low engagement, suggesting a lower amount of items are listed under these categories, as well as less engagement from the general population, suggesting niche audiences. The category imbalance means that any category-aware model will need to handle the underrepresented classes by possibly implementing stratification.
+**Figure 3** is a bar chart that shows the events broken down by the product category, stored in **c0\_name.** Women’s fashion is the highest populated category with over \~400 million events, nearly double the next category after, which is Toys & Collectibles at \~240 million. Men, Kids, Home, Electronics, and Beauty form a mid-tier cluster at about 80-120 million events each. Finally, categories like Handmade, Office, Arts & Crafts, Pet Supplies, Garden & Outdoor, Tools, all have low engagement, suggesting a lower amount of items are listed under these categories, as well as less engagement from the general population, suggesting niche audiences. The category imbalance means that any category-aware model will need to handle the underrepresented classes by possibly implementing stratification.
 
-**Plot 4** is a line graph that plots the average rate of like events among like and view events relative to prices for the dataset’s listings that have been grouped into 10 dollar bins. This graph shows that there is an approximately exponential decay in like events relative to like and view events until about the 2000 dollar bin. After the 2000 dollar buck the graph has much more variance and doesn’t show much change in the like average as price increases. This is likely due to high price items being much less common than low price items making price buckets past 2000 dollars more vulnerable to randomness and noise.
+**Figure 4** is a line graph that plots the average rate of like events among like and view events relative to prices for the dataset’s listings that have been grouped into 10 dollar bins. This graph shows that there is an approximately exponential decay in like events relative to like and view events until about the 2000 dollar bin. After the 2000 dollar buck the graph has much more variance and doesn’t show much change in the like average as price increases. This is likely due to high price items being much less common than low price items making price buckets past 2000 dollars more vulnerable to randomness and noise.
+
+**Figure 5** shows the explained variance from the SVD dimensionality reduction step. The plot shows how much information is captured by each reduced component, helping us understand whether the reduced feature space still preserves most of the important structure from the original features. Since the earlier components explain more variance, this supports using SVD to compress the dataset before applying additional modeling.
 
 ### Preprocessing using Spark
 
