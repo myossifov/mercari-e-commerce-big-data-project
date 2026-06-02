@@ -387,7 +387,15 @@ We analyzed the model’s predictions by looking at correct classifications, fal
 
 ### Analysis
 
+Using the formula p = n(S-1) / S(n-1):
+- With 7 executors: p = 7(1.31-1) / 1.31(6) = 0.276 (27.6% parallelizable)
 
+Efficiency drops to 18.8% at 7 executors, indicating:
+1. Spark scheduling and communication overhead becomes significant.
+2. The representative operation may be too small to fully benefit from 7 executors.
+3. Amdahl's Law limits speedup with ~72.4% sequential or non-parallel overhead.
+
+7 executors provides some improvement in runtime, reducing execution time from 10.65 seconds to 8.11 seconds, but the low efficiency suggests that this operation does not scale well under the tested configuration.
 
 # Conclusion
 
