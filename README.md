@@ -425,3 +425,5 @@ William Zou: Coder/Writer: For this project, I contributed as both a coder and w
 Anika Bhattacharya: Coder/Writer: For this project, I drafted the initial abstract and contributed to the pre-processing and model building. I was responsible for part 3 in assignment 3 and part 2 in assignment 4. 
 
 Martin Yossifov: Coder/Writer: Set up the GitHub repository, identified the dataset used for the project, contributed to the write-up for Parts 3 (last question) and Part 4 (Q3) and provided collaboration in areas as needed throughout the project.
+
+Travis Gillespie: Coder/Writer: For this project, I contributed to the EDA write-ups, model evaluation, and hyperparameter tuning. I was primarily responsible for part 4 in milestone 2, part 2 in milestone 3, part 1 in milestone 4, and the speed up analysis.
