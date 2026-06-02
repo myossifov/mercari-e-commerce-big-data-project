@@ -370,16 +370,20 @@ We analyzed the model’s predictions by looking at correct classifications, fal
 ## Speedup Analysis
 
 
-### Baseline Measurement
+### Baseline Timing
 
 
-### Scaled Measurement
+### Parallel Timing
 
 
-### Calculate Metrics
+### Speedup Calculation
 
 
-### Amdahl's Law Analysis
+### Results table
+
+
+### Analysis
+
 
 
 # Conclusion
