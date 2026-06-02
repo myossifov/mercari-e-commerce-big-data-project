@@ -392,7 +392,7 @@ Using the formula p = n(S-1) / S(n-1):
 - With 4 executors: p = 4(1.04-1) / 1.04(3) = 0.051 (5.1% parallelizable)
 - With 7 executors: p = 7(1.07-1) / 1.07(6) = 0.076 (7.6% parallelizable)
 
-Efficiency drops to 26.0% with 4 executors to 15.3% with 7 executors, indicating:
+Efficiency drops to 26.0% with 4 executors, and to 15.3% with 7 executors, indicating:
 1. Spark scheduling and communication overhead becomes significant.
 2. The representative operation may be too small to fully benefit from multiple executors.
 3. Amdahl's Law suggests that only a small fraction of this operation was effectively parallelizable, while most of the runtime was limited by sequential work or Spark overhead.
