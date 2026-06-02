@@ -394,7 +394,7 @@ Using the formula p = n(S-1) / S(n-1):
 
 Efficiency drops to 26.0% with 4 executors to 15.3% with 7 executors, indicating:
 1. Spark scheduling and communication overhead becomes significant.
-2. The representative operation may be too small to fully benefit from 7 executors.
+2. The representative operation may be too small to fully benefit from multiple executors.
 3. Amdahl's Law suggests that only a small fraction of this operation was effectively parallelizable, while most of the runtime was limited by sequential work or Spark overhead.
 
 The 7-executor configuration provides the fastest runtime, reducing execution time from 5.97 seconds to 5.58 seconds, but the low efficiency suggests that this specific operation does not scale well under the tested configurations.
