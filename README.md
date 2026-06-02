@@ -369,16 +369,6 @@ We analyzed the model’s predictions by looking at correct classifications, fal
 
 ## Speedup Analysis
 
-
-### Baseline Timing
-
-
-### Parallel Timing
-
-
-### Speedup Calculation
-
-
 ### Results table
 | Executors | Memory/Exec | Time (sec) | Speedup | Efficiency |
 |---:|---:|---:|---:|---:|
