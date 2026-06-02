@@ -382,8 +382,9 @@ We analyzed the model’s predictions by looking at correct classifications, fal
 ### Results table
 | Executors | Memory/Exec | Time (sec) | Speedup | Efficiency |
 |---:|---:|---:|---:|---:|
-| 1 | 16 GB | 10.65 | 1.00x | 100% |
-| 7 | 2 GB | 8.11 | 1.31x | 18.8% |
+| 1 | 16 GB | 5.97 | 1.00x | 100% |
+| 4 | 3.5 GB | 5.74 | 1.04x | 26.0% |
+| 7 | 2 GB | 5.58 | 1.07x | 15.3% |
 
 ### Analysis
 
